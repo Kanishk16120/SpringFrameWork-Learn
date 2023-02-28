@@ -8,8 +8,14 @@ public class Test {
 
     public static void main(String[] args) {
         AbstractApplicationContext context=new ClassPathXmlApplicationContext("lifeconfig.xml");
+        context.registerShutdownHook();
         Life l1=(Life) context.getBean("l1");
         System.out.println(l1);
-        context.registerShutdownHook();
+
+        System.out.println("--------------------------" +
+                "------------------------------------");
+        Coke c1= (Coke) context.getBean("c1");
+        System.out.println(c1);
+
     }
 }
