@@ -6,7 +6,7 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
-
+  <context:annotation-config />
     <!--  this is our beans -->
     <bean class="org.example.lifecycle.Life" name="l1" init-method="init" destroy-method="destroy">
         <property name="price" value="22"/>
@@ -14,6 +14,9 @@
     <bean class="org.example.lifecycle.Coke" name="c1">
         <property name="price" value="23" />
     </bean>
+  <bean class="org.example.lifecycle.AnnoExam" name="example">
+      <property name="subject" value="Physics" />
 
+  </bean>
 
 </beans>

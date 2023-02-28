@@ -16,6 +16,9 @@ public class Test {
                 "------------------------------------");
         Coke c1= (Coke) context.getBean("c1");
         System.out.println(c1);
+        AnnoExam example= (AnnoExam) context.getBean("example");
+        System.out.println(example);
+
 
     }
 }
