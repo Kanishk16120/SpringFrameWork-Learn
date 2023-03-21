@@ -8,10 +8,12 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!--  this is our beans -->
-    <bean class="org.example.ci.Person" name="person">
-       <constructor-arg value="Kanishk"/>
-        <constructor-arg value="14" type="int"/>
+    <bean class="org.example.autowire.Address" name="address">
+        <property name="street" value="Temp Street"/>
+        <property name="city" value="Ajmer"/>
     </bean>
+    <bean class="org.example.autowire.Emp" name="emp" autowire="byType"/>
+
 
 
 </beans>
